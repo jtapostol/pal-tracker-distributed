@@ -10,6 +10,6 @@ applications:
     SECURITY_USER_NAME: actuator
     SECURITY_USER_PASSWORD: operations4red
   services:
-  - tracker-backlog-database
+  - tracker-registration-database
   - tracker-service-registry
   - tracker-sso
