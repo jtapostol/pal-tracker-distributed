@@ -1,5 +1,18 @@
 import io.pivotal.pal.tracker.gradlebuild.DependenciesGraphPlugin
 
+
+repositories {
+    jcenter()
+}
+
+configurations {
+    scm
+}
+
+dependencies {
+    scm 'org.eclipse.jgit:org.eclipse.jgit:4.9.2.201712150930-r'
+}
+
 buildscript {
     ext {
         springBootVersion = "1.5.7.RELEASE"
@@ -38,7 +51,6 @@ subprojects {
         compile "com.fasterxml.jackson.core:jackson-databind:2.8.4"
         compile "com.fasterxml.jackson.core:jackson-annotations:2.8.4"
         compile "org.slf4j:slf4j-api:1.7.10"
-
         testCompile "junit:junit:4.12"
         testCompile "org.mockito:mockito-core:2.2.26"
         testCompile "org.assertj:assertj-core:3.8.0"
